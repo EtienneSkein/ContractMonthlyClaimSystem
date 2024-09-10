@@ -10,7 +10,7 @@
     <!-- Dark Bootstrap table with white text -->
     <table class="table table-dark table-striped">
         <thead>
-            <tr>
+            <tr class="text-center">
                 <th>Lecturer Name</th>
                 <th>Date Submitted</th>
                 <th>Hours Worked</th>
@@ -21,7 +21,7 @@
         <tbody>
             @foreach (var claim in Model)
             {
-                <tr>
+                <tr class="text-center">
                     <td>John Doe</td> <!-- Hardcoded for now, replace with dynamic name later -->
                     <td>@claim.ClaimDate.ToString("MM/dd/yyyy")</td>
                     <td>@claim.HoursWorked</td>
@@ -40,4 +40,9 @@
             }
         </tbody>
     </table>
+
+    <!-- Button to go back to the Submit Monthly Claims page (at the bottom) -->
+    <div class="text-center mt-4">
+        <a href="/Claims/Submit" class="btn btn-secondary">Go Back to Submit Monthly Claims</a>
+    </div>
 </div>
