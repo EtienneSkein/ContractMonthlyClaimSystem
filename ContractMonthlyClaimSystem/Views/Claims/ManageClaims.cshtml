@@ -7,8 +7,8 @@
 <div class="container mt-5">
     <h2 class="text-center mb-4">Manage Submitted Claims</h2>
 
-    <!-- Table of Claims -->
-    <table class="table table-striped">
+    <!-- Dark Bootstrap table with white text -->
+    <table class="table table-dark table-striped">
         <thead>
             <tr>
                 <th>Lecturer Name</th>
@@ -22,11 +22,11 @@
             @foreach (var claim in Model)
             {
                 <tr>
-                    <td>John Doe</td> <!-- Hardcoded for now,will replace with dynamic name later -->
+                    <td>John Doe</td> <!-- Hardcoded for now, replace with dynamic name later -->
                     <td>@claim.ClaimDate.ToString("MM/dd/yyyy")</td>
                     <td>@claim.HoursWorked</td>
                     <td>
-                        <a href="#">@claim.SupportingDocument</a> <!--Will replace with actual document download logic at a later stage -->
+                        <a href="#" class="text-white">@claim.SupportingDocument</a> <!-- White link text -->
                     </td>
                     <td>
                         <form asp-action="Approve" method="post" style="display: inline;">
