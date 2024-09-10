@@ -29,10 +29,13 @@
                         <a href="#" class="text-white">@claim.SupportingDocument</a> <!-- White link text -->
                     </td>
                     <td>
-                        <form asp-action="Approve" method="post" style="display: inline;">
+                        <!-- Approve button with confirmation -->
+                        <form asp-action="Approve" method="post" style="display: inline;" onsubmit="return confirmAction('approve');">
                             <button type="submit" class="btn btn-success">Approve</button>
                         </form>
-                        <form asp-action="Reject" method="post" style="display: inline;">
+
+                        <!-- Reject button with confirmation -->
+                        <form asp-action="Reject" method="post" style="display: inline;" onsubmit="return confirmAction('reject');">
                             <button type="submit" class="btn btn-danger">Reject</button>
                         </form>
                     </td>
@@ -46,3 +49,13 @@
         <a href="/Claims/Submit" class="btn btn-primary">Go Back to Submit Monthly Claims</a>
     </div>
 </div>
+
+<!-- JavaScript to show a confirmation dialog -->
+@section Scripts {
+    <script type="text/javascript">
+        function confirmAction(action) {
+            var message = "Are you sure you want to " + action + " this claim?";
+            return confirm(message);
+        }
+    </script>
+}
