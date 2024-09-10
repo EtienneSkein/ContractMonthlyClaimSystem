@@ -1,0 +1,79 @@
+/* Base Font Size for Responsiveness */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Focus Styles for Buttons and Form Inputs */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Ensure Body has Minimum Height and Footer Spacing */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #343a40; /* Darker background (dark gray) */
+    color: #f8f9fa; /* Light text color for better contrast */
+}
+
+/* Header Styling */
+h2 {
+    color: #ffffff; /* White color for the heading */
+}
+
+/* Form Controls with Rounded Corners */
+.form-control {
+    border-radius: 5px; /* Rounded corners for input fields */
+    background-color: #495057; /* Darker input background */
+    color: #ffffff; /* White text color for input fields */
+}
+
+    .form-control::placeholder {
+        color: #ced4da; /* Lighter placeholder color */
+    }
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff; /* Primary button color */
+    border: none;
+    padding: 10px 20px; /* Padding for a larger clickable area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+    .btn-primary:hover {
+        background-color: #0056d6; /* Darker blue on hover */
+    }
+
+/* Adding Space Between Form Elements */
+.form-group {
+    margin-bottom: 20px; /* Adds space between form elements */
+}
+
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Fixed height for the footer */
+    background-color: #212529; /* Dark footer background */
+    color: #f8f9fa; /* Light footer text color */
+    text-align: center;
+    line-height: 60px; /* Vertically center text */
+}
+
+/* Optional: More padding and margin adjustments if needed */
